@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventServiceService } from '../event-service.service';
 
 @Component({
   selector: 'app-second-component',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecondComponentComponent implements OnInit {
 
-  constructor() { }
+  data = '';
+  constructor(private myservice:EventServiceService) {
+    myservice.on<string>().subscribe(mydata=>{
+      this.data=mydata;
+    });
+   }
 
   ngOnInit(): void {
   }
 
 }
+function subscribe(arg0: (mydata: any) => void): any {
+  throw new Error('Function not implemented.');
+}
+

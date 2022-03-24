@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventServiceService } from '../event-service.service';
 
 @Component({
   selector: 'app-first-component',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstComponentComponent implements OnInit {
 
-  constructor() { }
+  sendThisData = "Gujjula Pradeep Reddy";
+
+  constructor(private myservice:EventServiceService) {
+    myservice.emit<string>(this.sendThisData);
+   }
 
   ngOnInit(): void {
   }

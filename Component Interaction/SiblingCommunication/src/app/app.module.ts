@@ -1,3 +1,4 @@
+import { EventServiceService } from './event-service.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,7 +17,7 @@ import { SecondComponentComponent } from './second-component/second-component.co
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EventServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
