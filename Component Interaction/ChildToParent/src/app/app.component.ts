@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ChildToParent';
+  data:any;
+  ParentFunction(abc:any){
+    console.log(abc);
+    this.data=abc;
+    console.log(this.data);
+  }
 }
