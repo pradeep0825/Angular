@@ -19,7 +19,5 @@ export class SecondComponentComponent implements OnInit {
   }
 
 }
-function subscribe(arg0: (mydata: any) => void): any {
-  throw new Error('Function not implemented.');
-}
+
 
